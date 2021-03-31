@@ -1,5 +1,4 @@
-
-
+//function that filters and creates html elements for new data
 function metaData(sample) {
     d3.json("http://localhost:8000/StarterCode/samples.json").then((data) => {
         console.log(data);
@@ -41,6 +40,37 @@ function createChart(sample) {
         Plotly.newPlot("bar", barData, barlayout);
 
         //Bubble chart
+        var trace1 = {
+            x: otu_ids,
+            y: sample_values,
+            text: otu_labels,
+            mode: "markers",
+            marker: {
+                color: otu_ids,
+                size: sample_values,
+            }
+        };
+
+        var data = [trace1];
+
+        var layout = {
+            title: "Distribution of OTU's",
+            showlegend: false,
+            height: 600,
+            width: 600,
+            xaxis: {
+                title:{
+                    text: "OTU ids"
+                }
+            },
+            yaxis: {
+                title: {
+                    text: "Sample Values"
+                }
+            }
+        };
+
+        Plotly.newPlot("bubble", data, layout);
 
     });
 }

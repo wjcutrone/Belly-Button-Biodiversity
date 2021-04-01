@@ -90,9 +90,17 @@ function init() {
 }
 
 //Function to show data for new sample
-function updateSample(newSample) {
-    createChart(newSample);
-    metaData(newSample);
-}
+// function optionChanged(testSubject) {
+//     //create a variable to reference the dropdown where test subject can be changed
+//     var menuOption = d3.select("#selDataset");
+//     //create variable to select value for whatever user puts into this field
+//     var userSelection = menuOption.property("value");
+//     //run metadata and create chart function fors the new user choice
+//     metaData(userSelection);
+//     createChart(userSelection);
+// };
+
+// // //Event handler if id has changed
+// userSelection.on("change", optionChanged(userSelection));
 
 init();

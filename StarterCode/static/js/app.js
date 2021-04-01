@@ -83,24 +83,23 @@ function init() {
         sampleNames.forEach((sample) => {
             dropdownMenu.append("option").text(sample).property("value", sample);
         });
-    var defaultSample = sampleNames[0];
-    createChart(defaultSample);
-    metaData(defaultSample);
+        var defaultSample = sampleNames[0];
+        createChart(defaultSample);
+        metaData(defaultSample);
+        dropdownMenu.on("change", optionChanged);
     });
 }
 
 //Function to show data for new sample
-// function optionChanged(testSubject) {
-//     //create a variable to reference the dropdown where test subject can be changed
-//     var menuOption = d3.select("#selDataset");
-//     //create variable to select value for whatever user puts into this field
-//     var userSelection = menuOption.property("value");
-//     //run metadata and create chart function fors the new user choice
-//     metaData(userSelection);
-//     createChart(userSelection);
-// };
-
-// // //Event handler if id has changed
-// userSelection.on("change", optionChanged(userSelection));
+function optionChanged() {
+    //create a variable to reference the dropdown where test subject can be changed
+    var menuOption = d3.select("#selDataset");
+    //create variable to select value for whatever user puts into this field
+    var userSelection = menuOption.property("value");
+    //run metadata and create chart function fors the new user choice
+    metaData(userSelection);
+    createChart(userSelection);
+    console.log(userSelection);
+};
 
 init();

@@ -1,2 +1,2 @@
-# Belly-Button-Biodiversity
-Utilization of plotly.js to show common microbes in the human navel
+# Belly Button Biodiversity
+The objective of this repository was to create a webapp that could display data about the various microbes that colonize the human navel, and to also allow the user to filter by subject. The raw data used comes from the file called samples.json. In this file, one can find lots of different microbe sample information for each subject in the study. Demographic information contained about the subjects included ethinicity, gender, age, location, bbtype, and washing frequency. In addition to being able to view the demographic information contained for each subjet, there is also a lot of information to view regarding the types and amounts of microbes that live in each subject. For each subject we can see what OTU's (operational taxonomic units) are present in each subject.

@@ -9,5 +9,6 @@ The dashboard enables user to view data by subject. On the upper left hand side 
 
 Concerning the process for creating the dashboard, the d3 library was used to read the samples.json file. Following this, javascript was used to create the dropdown menu and to update the data when a different subject id was selected. To construct the plots, Plotly.js was used. 
 
-In order to experience the interactive dashboard, click on this link:
+In order to experience the interactive dashboard, use this link:
+https://wjcutrone.github.io/Belly-Button-Biodiversity/StarterCode/
 

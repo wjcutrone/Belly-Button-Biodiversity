@@ -1,6 +1,6 @@
 //function that filters and creates html elements for new data
 function metaData(sample) {
-    d3.json("./StarterCode/samples.json").then((data) => {
+    d3.json("./samples.json").then((data) => {
         console.log(data);
         var metadata = data.metadata;
         var outputArray = metadata.filter(sampleObject => sampleObject.id == sample);
@@ -15,7 +15,7 @@ function metaData(sample) {
 
 // Function to create horizontal bar chart
 function createChart(sample) {
-    d3.json("./StarterCode/samples.json").then((data) => {
+    d3.json("./samples.json").then((data) => {
         var samples = data.samples;
         var outputArray = samples.filter(sampleObject => sampleObject.id == sample);
         var output = outputArray[0];
@@ -78,7 +78,7 @@ function createChart(sample) {
 //create function init
 function init() {
     var dropdownMenu = d3.select("#selDataset");
-    d3.json("./StarterCode/samples.json").then((data) => {
+    d3.json("./samples.json").then((data) => {
         var sampleNames = data.names;
         sampleNames.forEach((sample) => {
             dropdownMenu.append("option").text(sample).property("value", sample);
